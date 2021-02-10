@@ -15,34 +15,40 @@ import java.util.*;
 
 public class CalculatorController implements Subject {
 
-    @FXML public Button button9;
-    @FXML public Button button8;
-    @FXML public Button button7;
-    @FXML public Button button6;
-    @FXML public Button button5;
-    @FXML public Button button4;
-    @FXML public Button button3;
-    @FXML public Button button2;
-    @FXML public Button button1;
-    @FXML public Button button0;
+    @FXML private Button button9;
+    @FXML private Button button8;
+    @FXML private Button button7;
+    @FXML private Button button6;
+    @FXML private Button button5;
+    @FXML private Button button4;
+    @FXML private Button button3;
+    @FXML private Button button2;
+    @FXML private Button button1;
+    @FXML private Button button0;
 
-    @FXML public Button buttonTimes;
-    @FXML public Button buttonMinus;
-    @FXML public Button buttonPlus;
-    @FXML public Button buttonEquals;
-    @FXML public Button buttonClear;
-    @FXML public Button buttonDivide;
+    @FXML private Button buttonTimes;
+    @FXML private Button buttonMinus;
+    @FXML private Button buttonPlus;
+    @FXML private Button buttonEquals;
+    @FXML private Button buttonClear;
+    @FXML private Button buttonDivide;
+
+    @FXML private Button buttonOpenParenth;
+    @FXML private Button buttonClosedParenth;
+    @FXML private Button buttonPoint;
+    @FXML private Button buttonNeg;
 
     @FXML private TextArea textField;
 
-    List<Button> buttonList = new ArrayList<>();
-    List<Observer> observerList;
-    StringBuilder mathExpressionString;
-    Set<String> mathSymbols;
+    private List<Button> buttonList;
+    private List<Observer> observerList;
+    private StringBuilder mathExpressionString;
+    private final Set<String> mathSymbols;
 
     public CalculatorController() {
-        observerList = new ArrayList<Observer>();
-        mathExpressionString = new StringBuilder("");
+        observerList = new ArrayList<>();
+        buttonList = new ArrayList<>();
+        mathExpressionString = new StringBuilder();
         mathSymbols = new HashSet<>(4);
         mathSymbols.addAll(Arrays.asList("+", "-", "*", "/"));
     }
@@ -65,6 +71,7 @@ public class CalculatorController implements Subject {
         buttonList.add(buttonTimes);
         buttonList.add(buttonEquals);
         buttonList.add(buttonClear);
+        buttonList.add(buttonPoint);
 
 
     }
@@ -105,10 +112,13 @@ public class CalculatorController implements Subject {
     }
 
     private void updateExpressionString(Button button) {
-        if (mathSymbols.contains(button.getText())) {
+        String buttonText = button.getText();
+        if (mathSymbols.contains(buttonText)) {
             mathExpressionString.append(" ").append(button.getText()).append(" ");
+        } else if (buttonText.equals("(-)")) {
+            mathExpressionString.append("-");
         } else {
-            mathExpressionString.append(button.getText());
+            mathExpressionString.append(buttonText);
         }
     }
 

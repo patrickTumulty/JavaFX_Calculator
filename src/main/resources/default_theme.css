@@ -8,16 +8,29 @@
 
 .text-area .content {
     -fx-background-color: #5c67ff;
+    -fx-background-insets: 2;
 }
 
 .button {
     -fx-border-color: #858585;
-    -fx-border-width: 1;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
     -fx-background-color: #edece8;
+    -fx-background-radius: 8;
+    -fx-background-insets: 1;
     -fx-font-size: 15pt;
+
 }
 
 #buttonClear {
     -fx-background-color: #ff4040;
     -fx-text-fill: #ffffff;
+}
+
+#buttonNeg {
+    -fx-font-size: 13pt;
+}
+
+#buttonPoint {
+    -fx-font-size: 20pt;
 }

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" maxHeight="500.0" maxWidth="300.0" minHeight="100.0" minWidth="300.0" prefHeight="403.0" prefWidth="300.0" styleClass="background" stylesheets="@default_theme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pt.controllers.CalculatorController">
+<VBox alignment="TOP_CENTER" maxHeight="509.0" maxWidth="300.0" minHeight="100.0" minWidth="300.0" prefHeight="462.0" prefWidth="300.0" styleClass="background" stylesheets="@default_theme.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pt.controllers.CalculatorController">
    <children>
       <TextArea fx:id="textField" editable="false" prefHeight="86.0" prefWidth="280.0" promptText="&gt;&gt;&gt;" stylesheets="@default_theme.css" wrapText="true" VBox.vgrow="NEVER">
          <VBox.margin>
@@ -27,37 +27,50 @@
       </TextArea>
       <GridPane alignment="CENTER" vgap="10.0" VBox.vgrow="NEVER">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="40.0" prefWidth="297.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="303.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="303.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="303.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="300.0" minWidth="40.0" prefWidth="297.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="303.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="303.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="303.0" minWidth="10.0" prefWidth="303.0" />
         </columnConstraints>
         <rowConstraints>
+          <RowConstraints valignment="CENTER" />
           <RowConstraints fillHeight="false" valignment="CENTER" vgrow="ALWAYS" />
           <RowConstraints fillHeight="false" valignment="CENTER" vgrow="ALWAYS" />
-          <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
             <RowConstraints fillHeight="false" valignment="CENTER" vgrow="ALWAYS" />
         </rowConstraints>
          <children>
-            <Button fx:id="button7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <Button fx:id="button8" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="8" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-            <Button fx:id="button9" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="button7" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="button8" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="8" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <Button fx:id="button9" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Button fx:id="buttonDivide" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="/" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
             <Button fx:id="buttonTimes" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="*" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Button fx:id="buttonPlus" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="+" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
             <Button fx:id="buttonMinus" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="-" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <Button fx:id="button4" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Button fx:id="button5" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
-            <Button fx:id="button6" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+            <Button fx:id="button4" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="button5" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="5" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="button6" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="6" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin></Button>
-            <Button fx:id="button1" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <Button fx:id="button2" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <Button fx:id="button3" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-            <Button fx:id="button0" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <Button fx:id="buttonEquals" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="=" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <Button fx:id="buttonClear" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" styleClass="button0" stylesheets="@default_theme.css" text="C" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="button1" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="button2" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="2" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="button3" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="3" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+            <Button fx:id="button0" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="buttonEquals" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="=" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <Button fx:id="buttonClear" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" styleClass="button0" stylesheets="@default_theme.css" text="C" GridPane.columnIndex="2" />
+            <Button fx:id="buttonOpenParenth" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="19.0" layoutY="70.0" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="(" />
+            <Button fx:id="buttonClosedParenth" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text=")" GridPane.columnIndex="1" />
+            <Button fx:id="buttonPoint" alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonNeg" alignment="CENTER" contentDisplay="CENTER" layoutX="78.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#onClickEvent" prefHeight="50.0" prefWidth="50.0" text="(-)" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="5.0" />
+               </font>
+            </Button>
          </children>
          <VBox.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
