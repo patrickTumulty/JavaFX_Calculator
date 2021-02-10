@@ -1,0 +1,23 @@
+.background {
+    -fx-background-color: #ded8b8;
+}
+
+.text-area {
+    -fx-text-fill: #ffffff;
+}
+
+.text-area .content {
+    -fx-background-color: #5c67ff;
+}
+
+.button {
+    -fx-border-color: #858585;
+    -fx-border-width: 1;
+    -fx-background-color: #edece8;
+    -fx-font-size: 15pt;
+}
+
+#buttonClear {
+    -fx-background-color: #ff4040;
+    -fx-text-fill: #ffffff;
+}
