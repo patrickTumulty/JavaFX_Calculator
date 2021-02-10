@@ -44,7 +44,7 @@ public class CalculatorController implements Subject {
         observerList = new ArrayList<Observer>();
         mathExpressionString = new StringBuilder("");
         mathSymbols = new HashSet<>(4);
-        mathSymbols.addAll(Arrays.asList("+", "-", "*", "÷"));
+        mathSymbols.addAll(Arrays.asList("+", "-", "*", "/"));
     }
 
     @FXML
@@ -90,7 +90,6 @@ public class CalculatorController implements Subject {
             notifyObservers(mathExpressionString.toString());
         }
         updateDisplay(clickedButton);
-
     }
 
     private void updateDisplay(Button button) {

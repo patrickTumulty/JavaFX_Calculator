@@ -6,16 +6,18 @@ import java.util.List;
 
 public class MathExpressionEvaluator {
     private List<String> expressionList;
-    private double total;
 
     public MathExpressionEvaluator() {
-        this.total = 0.0;
+
     }
 
-    public double evaluate(String expression) {
+    public double evaluate(String expression) throws IllegalArgumentException {
         expressionList = splitExpressionStringToList(expression);
         if (!expressionListIsLegal()) {
             throw new IllegalArgumentException();
+        }
+        if (expressionList.size() == 1) {
+            return Double.parseDouble(expressionList.get(0));
         }
         return evaluateExpressionList();
     }
@@ -41,7 +43,6 @@ public class MathExpressionEvaluator {
         SimpleExpression simpleExpression;
         double value = 0.0;
         while (expressionList.size() != 0) {
-            System.out.println(expressionList);
             simpleExpression = getNextSimpleExpression();
             value = SimpleExpression.evaluateSimpleExpression(simpleExpression);
             if (expressionList.size() != 0) {
@@ -85,11 +86,10 @@ public class MathExpressionEvaluator {
         return false;
     }
 
-
     private SimpleExpression getNextSimpleExpression() {
         String lhv, rhv, operator;
         int indexOfOperator = -1;
-        for (String op : Arrays.asList("÷", "*", "-", "+")) {
+        for (String op : Arrays.asList("/", "*", "-", "+")) {
             indexOfOperator = expressionList.indexOf(op);
             if (indexOfOperator != -1) break;
         }

@@ -1,13 +1,13 @@
-package com.pt.logic;
+package com.pt.interpreter;
 
 import com.pt.controllers.CalculatorController;
 import com.pt.observer.Observer;
 
-public class NumberProcessor implements Observer {
+public class InputInterpreter implements Observer {
     CalculatorController controller;
     MathExpressionEvaluator evaluator;
 
-    public NumberProcessor(CalculatorController controller) {
+    public InputInterpreter(CalculatorController controller) {
         evaluator = new MathExpressionEvaluator();
         this.controller = controller;
         this.controller.addObserver(this);
@@ -15,11 +15,13 @@ public class NumberProcessor implements Observer {
 
     @Override
     public void update(String string) {
-        Double answer = evaluator.evaluate(string);
-        if (answer == null) {
+        double answer;
+        try {
+            answer = evaluator.evaluate(string);
+        } catch (IllegalArgumentException ex) {
             controller.displayError();
-        } else {
-            controller.displayAnswer(answer);
+            return;
         }
+        controller.displayAnswer(answer);
     }
 }

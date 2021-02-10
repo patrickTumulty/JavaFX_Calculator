@@ -43,7 +43,7 @@ public class SimpleExpression {
             case '+' -> value = expression.leftHandValue + expression.rightHandValue;
             case '-' -> value = expression.leftHandValue - expression.rightHandValue;
             case '*' -> value = expression.leftHandValue * expression.rightHandValue;
-            case '÷' -> value = expression.leftHandValue / expression.rightHandValue;
+            case '/' -> value = expression.leftHandValue / expression.rightHandValue;
         }
         return value;
     }

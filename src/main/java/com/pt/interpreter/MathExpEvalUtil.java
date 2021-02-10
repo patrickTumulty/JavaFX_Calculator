@@ -3,7 +3,7 @@ package com.pt.interpreter;
 public class MathExpEvalUtil {
     public static boolean isMathSymbol(String element) {
         switch (element) {
-            case "+", "-", "*", "÷" -> {
+            case "+", "-", "*", "/" -> {
                 return true;
             }
         }
