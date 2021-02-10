@@ -1,7 +1,9 @@
 
 # Java Instruments FX-84
 
-[Short Video Demo](https://www.youtube.com/watch?v=2pLaWGY4Y20&feature=youtu.be)
+Video Demos
+- [Video Demo 1](https://www.youtube.com/watch?v=2pLaWGY4Y20&feature=youtu.be)
+- [Video Demo 2](https://www.youtube.com/watch?v=pDnrcWqyUw4&feature=youtu.be)
 
 New Features 
 
