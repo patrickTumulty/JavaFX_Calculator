@@ -2,20 +2,13 @@ package com.pt.app;
 
 import com.pt.controllers.CalculatorController;
 import com.pt.interpreter.InputInterpreter;
-import com.pt.interpreter.MathExpEvalUtil;
-import com.pt.interpreter.MathExpressionEvaluator;
-import com.pt.logic.NumberProcessor;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+
 
 public class Calculator extends Application {
 
